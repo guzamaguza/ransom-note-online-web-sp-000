@@ -8,8 +8,22 @@ function binaryMatch(magazine){
   return hist;
 }
 
+
 function canBuildNote(magazine, note){
+  let histMag = binaryMatch(magazine);
+  let histNote = {};
+  let splitNote = note.split();
+  splitNote.forEach(letter => {
+      histNote[letter] = histogram[letter] + 1 ;
+  })
+
+histNote.forEach(letter =>{
+  if(histNote[letter] < histMag[letter]){
+    return false; 
+  } else if(histNote[letter] > histMag[letter]){
+    return true;
+  }
+})
 
 }
 
-function 
