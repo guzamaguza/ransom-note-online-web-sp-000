@@ -1,7 +1,7 @@
 //collects assigns each letter as a key and the number of occurrences as the value
 function buildHistogram(input){
   let sortedInput = input.sort();
-  let histGen;
+  let histGen = {};
   sortedInput.forEach(letter => {
     histGen[letter] = histGen[letter] + 1 || 1;
   })
