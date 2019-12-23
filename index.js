@@ -10,20 +10,11 @@ function buildHistogram(input){
 
 
 function canBuildNote(magazine, note){
-  let histMag = binaryMatch(magazine);
-  let histNote = {};
-  let splitNote = note.split();
-  histNote = buildHistogram(splitNote);
-  //splitNote.forEach(letter => {
-  //    histNote[letter] = histNote[letter] + 1 ;
-  //})
-
-histNote.forEach(letter =>{
-  if(histNote[letter] < histMag[letter]){
-    return false;
-  } else if(histNote[letter] > histMag[letter]){
-    return true;
+  let hist = buildHistogram(magazine);
+  for(let i=0;i<note.length;i++){
+    if (hist[note[i]] > 0){hist[note[i]]--}
+    else return true 
+    
   }
-})
 
 }
