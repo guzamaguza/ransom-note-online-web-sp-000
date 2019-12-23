@@ -1,5 +1,5 @@
 //collects assigns each letter as a key and the number of occurrences as the value
-function binaryMatch(input){
+function buildHistogram(input){
   let sortedInput = input.sort();
   let histGen;
   sortedInput.forEach(letter => {
@@ -10,7 +10,7 @@ function binaryMatch(input){
 
 
 function canBuildNote(magazine, note){
-  let hist = binaryMatch(magazine);
+  let hist = buildHistogram(magazine);
   for(let i=0;i<note.length;i++){
     if (hist[note[i]] > 0){hist[note[i]]--}
     else {return false}
