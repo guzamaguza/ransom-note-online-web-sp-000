@@ -10,11 +10,12 @@ function buildHistogram(input){
 
 
 function binaryMatch(magazine){
-  let sortedMagazine = magazine.sort();
+  //let sortedMagazine = magazine.sort();
   let hist = {};
-  magazine.forEach(letter => {
-    hist[letter] = hist[letter] + 1 ;
-  })
+  hist = buildHistogram(magazine);
+  //magazine.forEach(letter => {
+  //  hist[letter] = hist[letter] + 1 ;
+  //})
   return hist;
 }
 
