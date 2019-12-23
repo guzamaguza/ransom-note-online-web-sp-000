@@ -2,7 +2,7 @@
 function buildHistogram(input){
   let sortedInput = input.sort();
   let histGen;
-  input.forEach(letter => {
+  sortedInput.forEach(letter => {
     histGen[letter] = histGen[letter] + 1;
   })
   return histGen;
