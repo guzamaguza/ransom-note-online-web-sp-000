@@ -11,7 +11,7 @@ function buildHistogram(input){
 
 function canBuildNote(magazine, note){
   let hist = buildHistogram(magazine);
-  //iterate thru each letter of the note and compare with magazine histogram 
+  //iterate thru each letter of the note and compare with magazine histogram
   for(let i=0;i<note.length;i++){
     if (hist[note[i]] > 0){hist[note[i]]--}
     else {return false}
