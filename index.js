@@ -9,7 +9,7 @@ function binaryMatch(magazine){
 }
 
 function canBuildNote(magazine, note){
-  
+
 }
 
 function 
