@@ -1,9 +1,16 @@
 //collects assigns each letter as a key and the number of occurrences as the value
+function buildHistogram(input){
+  input.forEach(letter => {
+    histGen[letter] = histGen[letter] + 1;
+  })
+}
+
+
 function binaryMatch(magazine){
   let sortedMagazine = magazine.sort();
   let hist = {};
   magazine.forEach(letter => {
-    hist[letter] = histogram[letter] + 1 ;
+    hist[letter] = hist[letter] + 1 ;
   })
   return hist;
 }
@@ -14,7 +21,7 @@ function canBuildNote(magazine, note){
   let histNote = {};
   let splitNote = note.split();
   splitNote.forEach(letter => {
-      histNote[letter] = histogram[letter] + 1 ;
+      histNote[letter] = histNote[letter] + 1 ;
   })
 
 histNote.forEach(letter =>{
