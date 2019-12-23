@@ -12,8 +12,8 @@ function buildHistogram(input){
 function canBuildNote(magazine, note){
   let hist = buildHistogram(magazine);
   for(let i=0;i<note.length;i++){
-    if (hist[note[i]] > 0){hist[note[i]]--};
-    else {return false};
+    if (hist[note[i]] > 0){hist[note[i]]--}
+    else {return false}
   }
   return true;
 }
