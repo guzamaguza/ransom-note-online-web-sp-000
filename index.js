@@ -19,11 +19,10 @@ function canBuildNote(magazine, note){
 
 histNote.forEach(letter =>{
   if(histNote[letter] < histMag[letter]){
-    return false; 
+    return false;
   } else if(histNote[letter] > histMag[letter]){
     return true;
   }
 })
 
 }
-
