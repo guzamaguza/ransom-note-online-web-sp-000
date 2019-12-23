@@ -15,5 +15,5 @@ function canBuildNote(magazine, note){
     if (hist[note[i]] > 0){hist[note[i]]--};
     else return false;
   }
-  return true; 
+  return true;
 }
